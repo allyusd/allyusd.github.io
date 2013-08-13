@@ -1,8 +1,6 @@
 http://allyusd.github.io
 =================
 
-[allyusd.github.io](http://allyusd.github.io)
-
 GitHub User Pages
 
 這是 [GitHub Pages](https://help.github.com/articles/what-are-github-pages) 的 
