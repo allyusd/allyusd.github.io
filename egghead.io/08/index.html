@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>AngularJS Tutorials</title>
+  </head>
+  <body>
+  <div ng-app="myApp">
+	  <div ng-controller="AvengersCtrl">
+	  <input type="text" ng-model="search.$">
+		<table>
+		  <tr ng-repeat="actor in avengers.cast | filter:search">
+		    <td>{{actor.name}}</td>
+			<td>{{actor.character}}</td>
+		  </tr>
+		</table>
+	  </div>
+  </div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>

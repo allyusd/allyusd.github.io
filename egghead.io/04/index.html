@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>AngularJS Tutorials</title>
+  </head>
+  <body>
+  <div ng-app="myApp">
+	  <div ng-controller="FirstCtrl">
+	    <input types="text" ng-model="data.message">
+		<h1>{{data.message + " world"}}</h1>
+	  </div>
+	  <div ng-controller="SecondCtrl">
+	    <input types="text" ng-model="data.message">
+		<h1>{{data.message + " world"}}</h1>
+	  </div>
+  </div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="js/main.js"></script>
+  </body>
+</html>
