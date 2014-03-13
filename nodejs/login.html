@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html>
+
+<head>
+	<title>Firebase WebSocket Login Example</title>
+	  
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="login.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="sidebar_left">
+			<div id="ccslist">
+				CCSList
+			</div>
+		</div>
+		<div id="content">
+		
+			<h1>Firebase WebSocket</h1>
+			<h3>Login Example</h3>    
+			
+			<p id="examples">Login using an integer for password, e.g. Foo 123</p>  
+			
+			<input id="username" title="Username" type="text" />
+			<input id="password" type="text" />
+			<button id="login">Login</button>
+			<button id="cmdGameList">CM_RMT_SVR__GET_GAME_LIST</button>
+			<button id="cmdCCSList">CM_RMT_SVR__GET_CCS_LIST</button>
+			<button id="cmdControlCCS">CM_RMT_SVR__CONTROL_CCS</button>
+			<button id="cmdDenyCCS">CM_RMT_SVR__DENY_CCS_SYSTEM_PACKET</button>
+			<button id="cmdGetServerSetting">CCM_RMT_CCS__GET_SERVER_SETTING</button>
+			<button id="cmdSetServerSetting">CCM_RMT_CCS__SET_SERVER_SETTING_V2</button>
+			
+			<br/><br/>
+			
+			<div id="result">
+			
+			</div>
+			
+			<div id="eventLog">
+			
+			</div>  
+			
+		</div><!-- #container -->
+		<div id="sidebar_right">
+			<div id="gamelist">
+				GameList
+			</div>
+		</div>
+	</div>
+</body>
+</html>
