@@ -80,7 +80,7 @@ var svg = d3.select("body").append("svg")
 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
 
-d3.csv("data.tsv", function(error, data) {
+d3.csv("data.csv", function(error, data) {
 	data.forEach(function(d) {
 		d.date = parseDate(d.date);
 		d.close = +d.close;
