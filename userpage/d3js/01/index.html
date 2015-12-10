@@ -52,7 +52,7 @@ var margin = {top: 50, right: 110, bottom: 100, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var formatDate = d3.time.format("%Y/%m/%d"),
+var formatDate = d3.time.format("%Y%m%d"),
     parseDate = formatDate.parse;
 
 var x = d3.time.scale()
