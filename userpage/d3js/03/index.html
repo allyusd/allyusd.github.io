@@ -83,11 +83,11 @@ var svg = d3.select("body").append("svg")
 d3.csv("data.csv", function(error, data) {
 	data.forEach(function(d) {
 		d.date = parseDate(d.date);
-		d.close = +d.close;
+		d.kg = +d.kg;
 	});
 
 	x.domain(d3.extent(data, function(d) { return d.date; }));
-	y.domain(d3.extent(data, function(d) { return d.close; }));
+	y.domain(d3.extent(data, function(d) { return d.kg; }));
 
 svg.append("g")
 	.attr("class", "x axis")
@@ -141,7 +141,7 @@ svg.append("rect")
 	.on("mousemove", mousemove);
 	  
 var bisectDate = d3.bisector(function(d) { return d.date; }).left,
-formatOutput = function(d) { return formatDate(d.date) + " - " + d.close + "kg"; };
+formatOutput = function(d) { return formatDate(d.date) + " - " + d.kg + "kg"; };
 
 function mousemove() {
 		var x0 = x.invert(d3.mouse(this)[0]),
@@ -149,10 +149,10 @@ function mousemove() {
 		d0 = data[i - 1],
 		d1 = data[i],
 		d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-		focus.select("circle.y").attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")");
-		focus.select("text.y").attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")").text(formatOutput(d));
-		focus.select(".x").attr("transform", "translate(" + x(d.date) + "," + y(d.close) + ")").attr("y2", height - y(d.close) );
-		focus.select(".y").attr("transform", "translate(" + width * -1 + ", " + y(d.close) + ")").attr("x2", width + x(d.date));
+		focus.select("circle.y").attr("transform", "translate(" + x(d.date) + "," + y(d.kg) + ")");
+		focus.select("text.y").attr("transform", "translate(" + x(d.date) + "," + y(d.kg) + ")").text(formatOutput(d));
+		focus.select(".x").attr("transform", "translate(" + x(d.date) + "," + y(d.kg) + ")").attr("y2", height - y(d.kg) );
+		focus.select(".y").attr("transform", "translate(" + width * -1 + ", " + y(d.kg) + ")").attr("x2", width + x(d.date));
 	}
 });
 </script>
